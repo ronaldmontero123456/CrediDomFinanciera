@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrediDomFinanciera.MainPage"
+             BackgroundColor="#FFF692"
+             NavigationPage.HasNavigationBar="False">
+
+    <StackLayout>
+
+
+        <Frame>
+            <StackLayout>
+
+                <Image Source="CrediDom.png" 
+               Aspect="Fill" 
+               HeightRequest="25"
+               WidthRequest="25">
+
+                </Image>
+
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Hola:"></Span>
+                            <Span Text="Name"></Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label>
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="USUARIO:"></Span>
+                            <Span Text="TELEFONO"></Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <BoxView BackgroundColor="#F0A845" WidthRequest="10" TranslationY="-6"></BoxView>
+            </StackLayout>
+        </Frame>
+
+        <Label Text="SU PROXIMA CUOTA A PAGAR $"/>
+
+    </StackLayout>
+
+</ContentPage>
