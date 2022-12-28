@@ -1,12 +1,12 @@
 ﻿using Android.Telephony;
 using CrediDomFinanciera.Abstraction;
-using System;
+using CrediDomFinanciera.Droid.Configuration;
 using Xamarin.Forms;
 
+[assembly: Dependency(typeof(AppInfoManager))]
 namespace CrediDomFinanciera.Droid.Configuration
 {
-    [assembly: Dependency(typeof(AppInfoManager))]
-    internal class AppInfoManager : IDeviceInfo
+    public class AppInfoManager : IDeviceInfo
     {
         public string GetMyPhoneNumber()
         {

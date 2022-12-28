@@ -39,22 +39,23 @@ namespace CrediDomFinanciera.Services
             client.Timeout.Add(new TimeSpan(0, 8, 0));
         }
 
-        public static async Task<List<PrestamoDetalle>> GetPrestamoDetalle(string key)
+        public static async Task<PrestamoDetalle> GetPrestamoDetalle(string key)
         {
-            var client = new HttpClient() { BaseAddress = new Uri("http://movilbusiness.com.do/eMovilBusiness/MovilBusinessApi/api/ReplicacionesSuscriptores/") };
+            var client = new HttpClient() { BaseAddress = new Uri("https://credidom.azurewebsites.net/") };
 
             client.Timeout.Add(new TimeSpan(0, 8, 0));
-            long PhoneNumber = 8299051291;
-            var response = await client.PostAsync("GetClientesVersion", new StringContent(JsonConvert.SerializeObject(PhoneNumber), Encoding.UTF8, "application/json"));
+            //long PhoneNumber = 8299051291;
+            var response = await client.GetAsync($"api/Credidom?PhoneNumber={key}");
 
             if (!response.IsSuccessStatusCode)
             {
+
             }
 
             var PrestamoDetalle = await response.Content.ReadAsStringAsync();
 
             return JsonConvert
-                .DeserializeObject<List<PrestamoDetalle>>
+                .DeserializeObject<PrestamoDetalle>
                 (PrestamoDetalle);
         }
 
