@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrediDomFinanciera.View.Cuentas">
+
+    <ScrollView>
+        <StackLayout VerticalOptions="Center">
+
+            <Frame Margin="10" CornerRadius="12">
+                <StackLayout>
+
+                    <Frame Margin="20,20,20,10" CornerRadius="25" BorderColor="#332960">
+                        <Image Source="CrediDom.png" 
+                       Aspect="Fill"
+                           VerticalOptions="CenterAndExpand"
+                       HeightRequest="25"
+                       WidthRequest="25">
+                        </Image>
+                    </Frame>
+
+                    <StackLayout Margin="10,40,10,10">
+                        <Label Text="COMO REALIZAR EL PAGO DE MIS CUOTAS" TextColor="Black" FontSize="25"></Label>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <!--<BoxView BackgroundColor="#F0A845" Grid.Row="1" WidthRequest="0.1" TranslationY="-6"></BoxView-->
+
+            <Frame BackgroundColor="#332960" Margin="10" CornerRadius="12">
+                <StackLayout>
+
+                    <Label 
+                    Text="1 - DIRIGIENDOSE AL DEALER AUTORIZADO EN DONDE ADQUIRIO SU EQUIPO Y PAGAR SU CUOTA CORRESPONDIENTE EN EFECTIVO."
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" FontSize="25" x:Name="txtlabel"/>
+                </StackLayout>
+            </Frame>
+
+            <Frame Margin="10" BackgroundColor="#F0A845" CornerRadius="12">
+                <StackLayout>
+                    <Label 
+                    Text="2 - REALIZANDO UNA TRANSFERENCIA O DEPOSITO BANCARIO A NUESTRA CUENTA CORRIENTE BANRESERVAS 960 - 491020 - 1 A NOMBRE DE CREDIDOM, IMPORTANTE: PONER EN EL CONCEPTO SU NOMBRE COMPLETO Y EL NUMERO DE ID DEL DISPOSITIVO QUE SE LE ASIGNO EN SU FACTURA AL MOMENTO DEL FINANCIAMIENTO."
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" 
+                    TextColor="#332960" FontSize="25"/>
+                </StackLayout>
+            </Frame>
+            
+            <Frame Margin="10" CornerRadius="12">
+                <StackLayout>
+                    <Label 
+                    Text="NOTA IMPORTANTE: PARA QUE SU PAGO SEA APLICADO FAVOR DE ENVIAR EL
+                        COMPROBANTE DE PAGO AL WHATSAPP DE NUESTRO DEPARTAMENTO DE COBROS 829 - 627 - 2938."
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" 
+                    TextColor="Red" FontSize="25"/>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

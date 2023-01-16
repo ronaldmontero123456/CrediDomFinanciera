@@ -8,5 +8,6 @@
         public string estatus { get; set; }
         public string nombre_cliente { get; set; }
         public float numprestamo { get; set; }
+        public float monto_proxima_cuota_pagar { get; set; }
     }
 }
