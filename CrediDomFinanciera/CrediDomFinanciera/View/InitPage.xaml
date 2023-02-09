@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrediDomFinanciera.View.InitPage"
+             BackgroundColor="#F0A845"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:system="clr-namespace:System;assembly=netstandard">
+
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="250"/>
+                <RowDefinition Height="7"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Frame>
+                <StackLayout>
+                    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
+                        <Label>
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span TextColor="#332960" FontSize="25" Text="Bienvenido a la"></Span>
+                                    <Span Text="{x:Static system:Environment.NewLine}"/>
+                                    <Span Text="gran Familia" TextColor="#332960" FontSize="25"></Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+                    <Image Source="CrediDom.png" 
+                       Aspect="Fill"
+                           VerticalOptions="CenterAndExpand"
+                       HeightRequest="25"
+                       WidthRequest="25">
+                    </Image>
+                </StackLayout>
+            </Frame>
+
+            <BoxView BackgroundColor="#332960" Grid.Row="1" WidthRequest="0.5" TranslationY="-6"></BoxView>
+
+            <Label Grid.Row="2" FontAttributes="Bold" TextColor="White" FontSize="20" Text="Ingresa tu número de teléfono" HorizontalOptions="Center"  VerticalOptions="Center"></Label>
+            
+            <Frame HasShadow="True" Margin="0,20" Padding="0" Grid.Row="3" HeightRequest="40" HorizontalOptions="FillAndExpand">
+                <Grid >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <!--<Image HeightRequest="20" WidthRequest="20" Margin="20,0" Source="search.png"/>-->
+                    <Entry Grid.Column="1" Placeholder="Search" TextColor="Black" FontSize="15" x:Name="ldlentry" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                    <Image Grid.Column="2" HeightRequest="20" WidthRequest="20" Margin="10,0" Source="iconsderecha.png">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+            </Frame>
+        </Grid>
+    </StackLayout>
+    
+</ContentPage>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrediDomFinanciera.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace CrediDomFinanciera
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new InitPage());
         }
 
         protected override void OnStart()
