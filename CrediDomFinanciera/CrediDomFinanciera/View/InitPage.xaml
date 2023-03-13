@@ -11,9 +11,9 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="250"/>
                 <RowDefinition Height="7"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
                 <RowDefinition Height="100"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
@@ -21,12 +21,12 @@
             <Frame>
                 <StackLayout>
                     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="Center">
-                        <Label>
+                        <Label TranslationY="30">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <Span TextColor="#332960" FontSize="25" Text="Bienvenido a la"></Span>
                                     <Span Text="{x:Static system:Environment.NewLine}"/>
-                                    <Span Text="gran Familia" TextColor="#332960" FontSize="25"></Span>
+                                    <Span Text="  gran Familia" TextColor="#332960" FontSize="25"></Span>
                                 </FormattedString>
                             </Label.FormattedText>
                         </Label>
@@ -42,24 +42,22 @@
 
             <BoxView BackgroundColor="#332960" Grid.Row="1" WidthRequest="0.5" TranslationY="-6"></BoxView>
 
-            <Label Grid.Row="2" FontAttributes="Bold" TextColor="White" FontSize="20" Text="Ingresa tu número de teléfono" HorizontalOptions="Center"  VerticalOptions="Center"></Label>
+            <Image Grid.Row="2" Source="dobleabajo.png"/>
             
-            <Frame HasShadow="True" Margin="0,20" Padding="0" Grid.Row="3" HeightRequest="40" HorizontalOptions="FillAndExpand">
-                <Grid >
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto"/>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="Auto"/>
-                    </Grid.ColumnDefinitions>
-                    <!--<Image HeightRequest="20" WidthRequest="20" Margin="20,0" Source="search.png"/>-->
-                    <Entry Grid.Column="1" Placeholder="Search" TextColor="Black" FontSize="15" x:Name="ldlentry" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
-                    <Image Grid.Column="2" HeightRequest="20" WidthRequest="20" Margin="10,0" Source="iconsderecha.png">
+            <Label Grid.Row="3" TranslationY="30" FontAttributes="Bold" TextColor="White" FontSize="20" Text="Ingresa tu número de teléfono" HorizontalOptions="Center"  VerticalOptions="Center"></Label>
+
+            <StackLayout Grid.Row="4" Margin="25" Orientation="Horizontal">
+                <Frame HasShadow="True" Margin="0,20" Padding="0" Grid.Row="3" CornerRadius="30" HeightRequest="40" HorizontalOptions="FillAndExpand">
+                    <Entry Grid.Column="1" Margin="10,0,0,0" Placeholder="Search" TextColor="Black" FontSize="15" x:Name="ldlentry" HorizontalOptions="FillAndExpand" VerticalOptions="Center"/>
+                </Frame>
+
+                <Image Grid.Column="2" HeightRequest="40" WidthRequest="40" Margin="10,0" Source="iconsderecha.png">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                         </Image.GestureRecognizers>
                     </Image>
-                </Grid>
-            </Frame>
+            </StackLayout>
+           
         </Grid>
     </StackLayout>
     

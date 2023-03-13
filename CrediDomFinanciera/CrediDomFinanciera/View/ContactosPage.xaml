@@ -1,36 +1,70 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CrediDomFinanciera.View.ContactosPage">
+             x:Class="CrediDomFinanciera.View.ContactosPage"
+             xmlns:system="clr-namespace:System;assembly=netstandard">
+    <ScrollView>
+        <StackLayout>
 
-    <StackLayout VerticalOptions="Center" HorizontalOptions="CenterAndExpand">
-
-
-        <Frame Margin="10" CornerRadius="12">
-            <StackLayout>
-
-                <Frame Margin="20,20,20,10" CornerRadius="25" BorderColor="#332960">
-                    <Image Source="CrediDom.png" 
+            <Image Margin="60" Source="CrediDom.png" 
                        Aspect="Fill"
-                           VerticalOptions="CenterAndExpand"
                        HeightRequest="25"
                        WidthRequest="25">
-                    </Image>
-                </Frame>
+            </Image>
 
-                <StackLayout Margin="10,40,10,10">
-                    <Label Text="CONTACTO" TextColor="Black" FontSize="25"></Label>
+            <BoxView BackgroundColor="#332960" HeightRequest="90" TranslationY="20"/>
+
+            <Grid>
+
+
+                <StackLayout TranslationY="-120">
+                    <Frame BorderColor="Gray" CornerRadius="100" 
+                   HeightRequest="200"
+                   WidthRequest="200"
+                   HorizontalOptions="Center"
+                   Padding="0"
+                   IsClippedToBounds="True">
+                        <Image Source="iconscallcenter.png" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+                    </Frame>
                 </StackLayout>
-            </StackLayout>
-        </Frame>
+            </Grid>
 
+            <Image TranslationY="-80" Source="icons8abajo96.png" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
 
-        <Frame BackgroundColor="#F0A845" Margin="10" CornerRadius="12">
-            <StackLayout>
-                <Label Text="departamento de cobros: 829-627-2938 " TextColor="#332960" FontSize="40"/>
-                <Label Text="call center: 8493306034" TextColor="#332960" FontSize="40"/>
-            </StackLayout>
-        </Frame>
+            <Frame BackgroundColor="Transparent" TranslationY="-60" BorderColor="#F0A845" Margin="32,0,32,0">
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Departamento" TextColor="Black" FontAttributes="Bold" FontSize="Title"/>
+                                <Span Text="{x:Static system:Environment.NewLine}"/>
+                                <Span Text="de cobros:" TextColor="Black" FontAttributes="Bold" FontSize="Title"/>
+                                <Span Text="{x:Static system:Environment.NewLine}"/>
+                                <Span Text="829-627-2938" TextColor="Black" FontSize="Title"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
 
-    </StackLayout> 
+            <Frame TranslationY="-40" BackgroundColor="Transparent" BorderColor="#F0A845" Margin="32,0,32,0">
+                <Label HorizontalOptions="Center">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Call Center" TextColor="Black" FontAttributes="Bold" FontSize="Title"/>
+                                <Span Text="{x:Static system:Environment.NewLine}"/>
+                                <Span Text="809-381-7030" TextColor="Black" FontSize="Title"/>
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Frame>
+
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

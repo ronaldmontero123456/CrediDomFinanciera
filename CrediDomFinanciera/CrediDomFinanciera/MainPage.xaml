@@ -6,11 +6,11 @@
              NavigationPage.HasNavigationBar="False"
              xmlns:views="clr-namespace:CrediDomFinanciera.View">
 
-    <views:HomePage Title="Home">
+    <views:HomePage IconImageSource="icons8directorio.png" Title="Home">
     </views:HomePage>
     <views:ContactosPage Title="Contacto">
     </views:ContactosPage>
-    <views:Cuentas Title="Cuentas Bancarias">
+    <views:Cuentas Title="Inf. de Pagos">
     </views:Cuentas>
     
 </TabbedPage>

@@ -1,60 +1,104 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="CrediDomFinanciera.View.Cuentas">
+             x:Class="CrediDomFinanciera.View.Cuentas" BackgroundColor="White">
 
     <ScrollView>
         <StackLayout VerticalOptions="Center">
 
-            <Frame Margin="10" CornerRadius="12">
-                <StackLayout>
 
-                    <Frame Margin="20,20,20,10" CornerRadius="25" BorderColor="#332960">
-                        <Image Source="CrediDom.png" 
-                       Aspect="Fill"
-                           VerticalOptions="CenterAndExpand"
-                       HeightRequest="25"
-                       WidthRequest="25">
-                        </Image>
-                    </Frame>
+            <StackLayout Margin="20">
+                <Frame BorderColor="#F0A845" CornerRadius="100" 
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   HorizontalOptions="Center"
+                   Padding="0"
+                   IsClippedToBounds="True">
+                    <Image Margin="10" Source="iconspagoonline.png" 
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center" />
+                </Frame>
+            </StackLayout>
 
-                    <StackLayout Margin="10,40,10,10">
-                        <Label Text="COMO REALIZAR EL PAGO DE MIS CUOTAS" TextColor="Black" FontSize="25"></Label>
-                    </StackLayout>
-                </StackLayout>
+            <Frame Margin="10" CornerRadius="30" Opacity="0.7" BackgroundColor="gray">
+                <Label Text="COMO REALIZAR EL PAGO DE MIS CUOTAS" TextColor="White" FontSize="25"></Label>
             </Frame>
             <!--<BoxView BackgroundColor="#F0A845" Grid.Row="1" WidthRequest="0.1" TranslationY="-6"></BoxView-->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"></RowDefinition>
+                </Grid.RowDefinitions>
+                <BoxView Margin="12" BackgroundColor="#332960" WidthRequest="0.7" ></BoxView>
+            </Grid>
+            
 
-            <Frame BackgroundColor="#332960" Margin="10" CornerRadius="12">
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                <Label TranslationX="20" VerticalOptions="Center" FontAttributes="Bold" TextColor="#F0A845" FontSize="Title" Text="Opcion"/>
+                <StackLayout Margin="20">
+                    <Frame BackgroundColor="#332960"  CornerRadius="100" 
+                   HeightRequest="40"
+                   WidthRequest="40"
+                   HorizontalOptions="Center"
+                   Padding="0"
+                   IsClippedToBounds="True">
+                        <Label VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Title" Text="1"/>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+
+            <Frame BackgroundColor="#FFF692" Margin="10" CornerRadius="0">
                 <StackLayout>
 
-                    <Label 
-                    Text="1 - DIRIGIENDOSE AL DEALER AUTORIZADO EN DONDE ADQUIRIO SU EQUIPO Y PAGAR SU CUOTA CORRESPONDIENTE EN EFECTIVO."
+                    <Label TextColor="Black" Opacity="0.6"
+                    Text="DIRIGIENDOSE AL DEALER AUTORIZADO EN DONDE ADQUIRIO SU EQUIPO Y PAGAR SU CUOTA CORRESPONDIENTE EN EFECTIVO."
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="CenterAndExpand" FontSize="25" x:Name="txtlabel"/>
                 </StackLayout>
             </Frame>
 
-            <Frame Margin="10" BackgroundColor="#F0A845" CornerRadius="12">
-                <StackLayout>
-                    <Label 
-                    Text="2 - REALIZANDO UNA TRANSFERENCIA O DEPOSITO BANCARIO A NUESTRA CUENTA CORRIENTE BANRESERVAS 960 - 491020 - 1 A NOMBRE DE CREDIDOM, IMPORTANTE: PONER EN EL CONCEPTO SU NOMBRE COMPLETO Y EL NUMERO DE ID DEL DISPOSITIVO QUE SE LE ASIGNO EN SU FACTURA AL MOMENTO DEL FINANCIAMIENTO."
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" 
-                    TextColor="#332960" FontSize="25"/>
+
+            <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                <Label TranslationX="20" VerticalOptions="Center" FontAttributes="Bold" TextColor="#F0A845" FontSize="Title" Text="Opcion"/>
+                <StackLayout Margin="20">
+                    <Frame BackgroundColor="#332960"  CornerRadius="100" 
+                   HeightRequest="40"
+                   WidthRequest="40"
+                   HorizontalOptions="Center"
+                   Padding="0"
+                   IsClippedToBounds="True">
+                        <Label VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Title" Text="2"/>
+                    </Frame>
                 </StackLayout>
-            </Frame>
-            
-            <Frame Margin="10" CornerRadius="12">
-                <StackLayout>
-                    <Label 
-                    Text="NOTA IMPORTANTE: PARA QUE SU PAGO SEA APLICADO FAVOR DE ENVIAR EL
-                        COMPROBANTE DE PAGO AL WHATSAPP DE NUESTRO DEPARTAMENTO DE COBROS 829 - 627 - 2938."
-                    VerticalOptions="CenterAndExpand" 
+            </StackLayout>
+
+            <Frame Margin="10" BackgroundColor="#FFF692" CornerRadius="12">
+                <Label    HorizontalTextAlignment="Start"                
+                    VerticalOptions="CenterAndExpand" Margin="5"
                     HorizontalOptions="CenterAndExpand" 
-                    TextColor="Red" FontSize="25"/>
-                </StackLayout>
+                    TextColor="Black"  FontSize="25">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <FormattedString.Spans>
+                                <Span Text="Realizando una transferencia o deposito bancario a nuestra cuenta corriente banreservas 960-491020-1 a nombre de"/>
+                                <Span FontAttributes="Bold" TextColor="#332960" FontSize="25" Text=" CrediDom"/>
+                                <Span Text=", importante: poner en el concepto su nombre completo y el numero de id del dispositivo que se le asigno en su factura al momento del financiamiento."/>                                            
+                            </FormattedString.Spans>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
             </Frame>
+
+            <Label Margin="20" 
+                    TextColor="Black" Opacity="0.6" FontSize="25">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span FontSize="25" FontAttributes="Bold" Text="NOTA IMPORTANTE:"/>
+                            <Span Text=" PARA QUE SU PAGO SEA APLICADO FAVOR DE ENVIAR EL COMPROBANTE DE PAGO AL WHATSAPP DE NUESTRO DEPARTAMENTO DE COBROS"/>
+                        </FormattedString.Spans>    
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
         </StackLayout>
     </ScrollView>
