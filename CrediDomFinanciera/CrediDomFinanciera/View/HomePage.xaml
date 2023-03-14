@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CrediDomFinanciera.View.HomePage"
              BackgroundColor="#FFF692"
+             Title="Home"
+             IconImageSource="paginaprincipal"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.BackButtonTitle=""
              xmlns:controls="clr-namespace:CrediDomFinanciera.Controls">
@@ -25,10 +27,10 @@
 
                     <Frame Margin="20,20,20,10" CornerRadius="25" BorderColor="#332960">
                         <Image Source="CrediDom.png" 
-                       Aspect="Fill"
-                           VerticalOptions="CenterAndExpand"
-                       HeightRequest="25"
-                       WidthRequest="25">
+                               Aspect="Fill"
+                               VerticalOptions="CenterAndExpand"
+                               HeightRequest="25"
+                               WidthRequest="25">
                         </Image>
                     </Frame>
 

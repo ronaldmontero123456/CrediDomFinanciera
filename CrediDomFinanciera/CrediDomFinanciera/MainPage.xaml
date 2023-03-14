@@ -3,14 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CrediDomFinanciera.MainPage"
              BackgroundColor="#FFF692"
+             BarBackgroundColor="#F0A845"
+             BarTextColor="White"
+             SelectedTabColor="White"
+            UnselectedTabColor="White"
              NavigationPage.HasNavigationBar="False"
              xmlns:views="clr-namespace:CrediDomFinanciera.View">
 
-    <views:HomePage IconImageSource="icons8directorio.png" Title="Home">
-    </views:HomePage>
-    <views:ContactosPage Title="Contacto">
-    </views:ContactosPage>
-    <views:Cuentas Title="Inf. de Pagos">
-    </views:Cuentas>
+    <TabbedPage.Children>
+        <views:HomePage>
+        </views:HomePage>
+        <views:ContactosPage Title="Contacto" IconImageSource="iconscallcenter.png">
+        </views:ContactosPage>
+        <views:Cuentas Title="Inf. de Pagos" IconImageSource="iconspagoonline.png">
+        </views:Cuentas>
+    </TabbedPage.Children>
+
     
 </TabbedPage>
